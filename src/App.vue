@@ -10,9 +10,11 @@
   </ul>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue';
-
+export interface TestProps {
+  name: string;
+}
 export default defineComponent({
   name: 'App',
 });
