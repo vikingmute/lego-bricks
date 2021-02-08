@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run clean && npm run build:esm && npm run build:umd",
     "lint": "vue-cli-service lint",
-    "build:esm": "rollup --config build/rollup.config.js"
+    "build:esm": "rollup --config build/rollup.esm.config.js",
+    "build:umd": "rollup --config build/rollup.umd.config.js",
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -29,6 +31,7 @@
     "@vue/eslint-config-typescript": "^5.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.38.5",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-typescript2": "^0.29.0",

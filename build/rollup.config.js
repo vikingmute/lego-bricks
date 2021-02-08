@@ -6,12 +6,9 @@ import { name } from '../package.json'
 const file = type => `dist/${name}.${type}.js`
 const overrides = {
   compilerOptions: { declaration: true },
-  exclude: [
-    "node_modules",
-    "src/App.vue",
-    "src/main.ts"
-  ]
+  exclude: ["node_modules"]
 }
+export { name, file }
 export default {
   input: 'src/index.ts',
   output: {
