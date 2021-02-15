@@ -1,19 +1,38 @@
 {
   "name": "lego-bricks",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
+  "main": "dist/lego-bricks.umd.js",
+  "module": "dist/lego-bricks.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Viking Zhang",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
+  "homepage": "https://github.com/imooc-lego/lego-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imooc-lego/lego-components"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "lint": "vue-cli-service lint",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.20"
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "vue": "^3.0.0"
   },
