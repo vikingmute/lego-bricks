@@ -2,7 +2,7 @@ import { App } from 'vue'
 export { textDefaultProps , textStylePropNames, TextComponentProps,
   imageDefaultProps, imageStylePropsNames, ImageComponentProps,
   shapeDefaultProps, shapeStylePropsNames, ShapeComponentProps,
-  transformToComponentProps
+  AllComponentProps
 } from './defaultProps'
 
 import LText from './components/LText'

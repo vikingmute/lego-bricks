@@ -67,6 +67,7 @@ export interface ImageComponentProps extends CommonComponentProps {
 export interface ShapeComponentProps extends CommonComponentProps {
   backgroundColor: string;
 }
+export type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps
 export const textDefaultProps: TextComponentProps = {
   // basic props - font styles
   text: '正文内容',
