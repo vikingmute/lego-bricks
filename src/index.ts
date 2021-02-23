@@ -1,4 +1,9 @@
 import { App } from 'vue'
+export { textDefaultProps , textStylePropNames, TextComponentProps,
+  imageDefaultProps, imageStylePropsNames, ImageComponentProps,
+  shapeDefaultProps, shapeStylePropsNames, ShapeComponentProps,
+  transformToComponentProps
+} from './defaultProps'
 
 import LText from './components/LText'
 import LImage from './components/LImage'

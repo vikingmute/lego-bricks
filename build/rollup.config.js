@@ -6,7 +6,7 @@ import { name } from '../package.json'
 const file = type => `dist/${name}.${type}.js`
 const overrides = {
   compilerOptions: { declaration: true },
-  exclude: ["node_modules"]
+  exclude: ["tests/**/*.ts", "tests/**/*.tsx"]
 }
 export { name, file }
 export default {
@@ -18,7 +18,7 @@ export default {
   },
   plugins: [
     nodeResolve(),
-    typescript({ tsconfigOverride: overrides}),
+    typescript({ tsconfigOverride: overrides }),
     vue(),
     css({ output: 'bundle.css' })
   ],
